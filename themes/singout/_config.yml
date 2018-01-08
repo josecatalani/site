@@ -1,0 +1,10 @@
+# Header
+menu:
+  me: /
+  blog: /blog
+  about: /about
+
+excerpt_link: Leia mais
+
+# Miscellaneous
+google_analytics: UA-XXXXX-Y

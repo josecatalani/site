@@ -1,0 +1,7 @@
+<section id="projects-list">
+    <ul>
+        <% site.categories.findOne({name: 'project'}).posts.sort('year', -1).forEach(function(project) {%>
+            <%- partial('_partial/project-item', { project: project }) %>
+        <% }) %>
+    </ul>
+</section>

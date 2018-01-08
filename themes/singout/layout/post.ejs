@@ -1,0 +1,6 @@
+<%- partial('_partial/header') %>
+<%  if(page.layout == "project") { %>
+<%- partial('_partial/project-details', { post: page }) %>
+<%  } else { %>
+<%- partial('_partial/post-details', { post: page }) %>
+<%  } %>

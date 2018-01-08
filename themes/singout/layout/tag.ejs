@@ -1,0 +1,3 @@
+<% site.posts.find({tags: 'React'}).sort('date', -1).forEach(function(post) {%>
+    <%- partial('_partial/related', { post: post }) %>
+<% }) %>

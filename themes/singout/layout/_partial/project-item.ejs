@@ -1,0 +1,9 @@
+<li>
+    <a href="<%- project.external_link %>" title="<%- project.title %>" target="_blank">
+        <div class="project-image"><%- image_tag(url_for('/images/' + project.slug + '/thumb.jpg')) %></div>
+        <div class="project-description">
+            <p class="project-title"><strong><%- project.title %></strong></p>
+            <p class="project-info"><span class="project-year"><%- project.year %></span></p>
+        </div>
+    </a>
+</li>

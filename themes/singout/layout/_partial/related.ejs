@@ -1,0 +1,9 @@
+<li>
+    <p class="blog-title"><a href="<%- url_for(post.path) %>" title="<%- post.title %>"><%- post.title %></a></p>
+    <p class="blog-tags">
+        <% post.tags.limit(3).forEach(function(tag) { %>
+        <a href="<%- url_for(tag.path) %>">#<%- tag.name.toLowerCase() %></a>
+        <% }) %>
+    </p>
+    <p class="blog-date"><%- full_date(post.date, 'DD MMMM, YYYY') %></p>
+</li>

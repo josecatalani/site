@@ -1,0 +1,15 @@
+<div id="home">
+    <section>
+        <img id="main-photo" src="/img/pic.jpg"/>
+        <p class="head">I'm <strong>José Victor Catalani</strong>, a web developer with love in art and coding.</p>
+        <p class="head">You can visit <a href="/projects" title="Projects">projects</a> i've worked, or if you are bored, you can read about <a href="/me" title="me">me</a>.</p>
+    </section>
+    <section id="posts">
+        <h2>Recent blogs</h2>
+        <ul class="post-list">
+            <% site.categories.findOne({name: 'post'}).posts.sort('date', -1).limit(5).forEach(function(post) {%>
+                <%- partial('_partial/related', { post: post }) %>
+            <% }) %>
+        </ul>
+    </section>
+</div>

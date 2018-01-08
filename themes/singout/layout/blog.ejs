@@ -1,0 +1,7 @@
+<section id="blog-list">
+    <ul class="post-list">
+        <% site.categories.findOne({name: 'post'}).posts.sort('date', -1).forEach(function(post) {%>
+            <%- partial('_partial/related', { post: post }) %>
+        <% }) %>
+    </ul>
+</section>

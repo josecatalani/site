@@ -1,0 +1,8 @@
+<%- partial('_partial/header') %>
+<% if (page.title == "projects") { %>
+<%- partial('projects') %> 
+<% } else if (page.title == "blog") { %>
+<%- partial('blog') %>
+<% } else { %> 
+<%- page.content %>
+<% } %>

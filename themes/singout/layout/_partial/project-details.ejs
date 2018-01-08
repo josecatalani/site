@@ -1,0 +1,17 @@
+<section id="project-details">
+    <header>
+        <h1><%- post.title %><small><%- post.year %></small></h1>
+        <p><%- post.description %></p>
+        <p><a href="<%- post.external_link %>" title="<%- post.title %>" target="_blank" class="visit-site">ver site</a></p>
+    </header>
+    <article>
+        <% if(post.full) { %>
+            <% post.full.forEach(function(image){ %>
+                <figure>
+                    <%- image_tag(url_for('/images/' + post.slug + '/' + image)) %>
+                </figure>
+            <% }) %>
+        <% } %>
+        <%- post.content %>
+    </article>
+</section>

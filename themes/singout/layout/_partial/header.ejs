@@ -1,0 +1,16 @@
+<nav id="main-nav">
+    <ul>
+        <li>
+            <a href="/" title="home">home</a>
+        </li>
+        <li>
+            <a href="/blog" title="blog" class="<%- page.title == 'blog' || page.layout == 'post' ? 'current' : '' %>">blog</a>
+        </li>
+        <li>
+            <a href="/projects" title="projects" class="<%- page.title == 'projects' || page.layout == 'project' ? 'current' : '' %>">projects</a>
+        </li>
+        <li>
+            <a href="/me" title="me" class="<%- page.title == 'me' ? 'current' : '' %>">me</a>
+        </li>
+    </ul>
+</nav>
